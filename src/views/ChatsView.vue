@@ -7,7 +7,7 @@
             </div>
         </aside>
         <article>
-            <router-view></router-view>
+            <router-view/>
         </article>
     </div>
 </template>
@@ -25,6 +25,22 @@ export default {
                 { id: 6, name: 'Nelson' }
             ]
         }
+    },
+    // watch: {
+    //     '$route.params': (val) => {
+    //         console.log('Update params', val)
+    //     }
+    // },
+    created() {
+        this.$watch(// Agregando un watcher de forma manual para poder acceder al objeto this de vue
+            () => this.$route.params,
+            (val) => {
+                console.log('Update params', val)
+            },
+            {
+                inmediate: true
+            }
+        )
     },
     methods: {
         back() {

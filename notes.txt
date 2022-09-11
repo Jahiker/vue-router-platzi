@@ -6,7 +6,18 @@
 -- this.$router.push permite agregar un nuevo registro en el objeto history del navegador 
 -- si al objeto de configuracion de push le pasamos la propiedad replace: true, no agregar un nuevo punto de navegacion sino que reemplaza el ultimo 
 -- para navegacion relativa this.$router.go() esta recibe un numero, que si es positivo son los pasos que avanzaras hacia adelante en el historial y si es negativo cuantos pasos atras en el historial 
+
 -- redirection: te envia a otra ruta 
+
 -- alias: muestra la misma vista final con una url diferente 
+
 -- es una ruta con props en true, toma todos los params de la url y los toma como props 
+
 -- Modos de historia: modo web html, modo hash 
+
+-- Navigations Gauards: con el metodo router.beforeEach recibe el objeto to y from que nos indica de donde venimos y a donde vamos en la navegacion y dentro del metodos podemos aplicar cualquier logica para permitir o denegar accesos a rutas 
+
+-- Rutas con metadatos: utilizado si necesitas mas informacion que la ruta origen y la ruta final para garantizar eccesos,
+-- Dentro del objeto de la ruta esta la esta la pripiedad meta, que puede contener todos los datos que necesitemos a la hora de garantizar acceso a una ruta 
+
+-- Obtencion de datos: 
