@@ -1,1 +1,12 @@
 # VUE ROUTER
+
+-- el objeto this.$route nos permite acceder a los parametros que hay en la url
+
+-- el objeto this.$router nos permite realizar navegacion programada en el sitio, sin esperar un evento click en algun link 
+-- this.$router.push permite agregar un nuevo registro en el objeto history del navegador 
+-- si al objeto de configuracion de push le pasamos la propiedad replace: true, no agregar un nuevo punto de navegacion sino que reemplaza el ultimo 
+-- para navegacion relativa this.$router.go() esta recibe un numero, que si es positivo son los pasos que avanzaras hacia adelante en el historial y si es negativo cuantos pasos atras en el historial 
+-- redirection: te envia a otra ruta 
+-- alias: muestra la misma vista final con una url diferente 
+-- es una ruta con props en true, toma todos los params de la url y los toma como props 
+-- Modos de historia: modo web html, modo hash 

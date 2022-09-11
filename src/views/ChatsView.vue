@@ -1,4 +1,5 @@
 <template>
+    <button @click="back">Back</button>
     <div class="layout">
         <aside>
             <div v-for="chat in chats" :key="chat.id">
@@ -23,6 +24,11 @@ export default {
                 { id: 5, name: 'Montserrat' },
                 { id: 6, name: 'Nelson' }
             ]
+        }
+    },
+    methods: {
+        back() {
+            this.$router.go(-1);
         }
     }
 }
